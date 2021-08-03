@@ -5,14 +5,117 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./assets/images/favicon.ico">
-  <title>Webpack Boilerplate</title>
+  <title>CalcKcal</title>
   <link rel="stylesheet" href="./dist/styles/index.css">
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <section class="container" id="webpack-boilerplate">
-    <img class="webpack-logo" src="./assets/images/webpackLogo.png" alt="webpack logo"></svg>
-    <h1>Webpack Boilerplate</h1>
+  <header class="container">
+    <a href="/">
+      <img src="./assets/images/calckcalLogo.png" alt="CalcKcal logo">
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="#PossibleDoubts">Possible doubts</a></li>
+        <li><a href="#CaloriesCalculation">Calories calculation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="container" id="CaloriesCalculator">
+    <h1>Welcome to our calories calculator!</h1>
+
+    <form class="caloriesCalculator">
+      <input required min="0" type="number" name="age" placeholder="Your age">
+      <input required min="0" type="number" name="weight" placeholder="Your weight (kg)">
+      <input required min="0" type="number" name="height" placeholder="Your height (cm)">
+
+      <div class="selectWrapper">
+        <select required name="physicalActivity">
+          <option value="" disable selected>Select your physical activity</option>
+          <option value="1.2">Sedentary</option>
+          <option value="1.375">Lightly active</option>
+          <option value="1.55">Moderately active</option>
+          <option value="1.725">Very active</option>
+          <option value="1.9">Extra active</option>
+        </select>
+      </div>
+
+      <div class="selectWrapper">
+        <select required name="gender">
+          <option value="" disable selected>Select your gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+      <button>Calculate</button>
+    </form>
+
+    <div class="container box hidden" id="CaloriesCalculatorResult">
+      <ul>
+        <li>Your basal metabolic rate is <b><span class="basalMetabolicRate"></span></b>.</li>
+        <li>To maintain your weight you need to consume <b><span class="caloriesToMaintainWeight"></span></b>.</li>
+        <li>To lose weight you need to consume <b><span class="caloriesToLoseWeight"></span></b>.</li>
+        <li>To gain weight you need to consume <b><span class="caloriesToGainWeight"></span></b>.</li>
+      </ul>
+    </div>
   </section>
+
+  <section class="container section" id="PossibleDoubts">
+    <h1>Possible doubts</h1>
+
+    <h2>How do I classify my physical activity?</h2>
+    <ul>
+      <li>Sedentary: few or no exercises.</li>
+      <li>Lightly active: practice some sport 1 or 3 days per week.</li>
+      <li>Moderately active: practice sport sports 3 or 5 days per week.</li>
+      <li>Very active: practice some sport 6 or 7 days per week.</li>
+      <li>Extra active: practice a very hard sport constantly.</li>
+    </ul>
+  </section>
+
+  <section class="container section" id="CaloriesCalculation">
+    <h1>Calories calculation</h1>
+
+    <p>
+      If you’re curious about how we come to those results that you saw ahead when you used the
+      calculator, here is the used formulas to get those results:
+    </p>
+
+    <h2>Basal Metabolic Rate (BMR) formulas</h2>
+    <ul>
+      <li>10 x weight<b>(kg)</b> + 6.25 x height<b>(cm)</b> - 5 x age + 5 <b>for man</b>.</li>
+      <li>10 x weight<b>(kg)</b> + 6.25 x height<b>(cm)</b> - 5 x age - 161 <b>for ​woman</b>.</li>
+    </ul>
+
+    <h2>Determining your activiy level according to your physical activity</h2>
+    <ul>
+      <li>Sedentary: <b>1,2</b>.</li>
+      <li>Lightly active: <b>1,375</b>.</li>
+      <li>Moderately active: <b>1,55</b>.</li>
+      <li>Very active: <b>1,725</b>.</li>
+      <li>Extra active: <b>1,9</b>.</li>
+    </ul>
+
+    <h2>So, the formula to get the needed calories to...</h2>
+    <ul>
+      <li>Maintain your weight is: <b>BMR x activity level</b>.</li>
+      <li>Lose weight is: <b>(BMR x activity level) - 450</b>.</li>
+      <li>Gain weight is: <b>(BMR x activity level) + 450</b>.</li>
+    </ul>
+  </section>
+
+  <footer class="container">
+    <small>
+      ©
+      <script>document.write(new Date().getFullYear())</script>
+      <a target="blank" href="https://github.com/DanielGustavo">
+        Daniel Gustavo
+      </a>
+    </small>
+  </footer>
 
   <script src="./dist/scripts/index.js"></script>
 </body>

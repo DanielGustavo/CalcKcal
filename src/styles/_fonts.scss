@@ -1,4 +1,27 @@
 @font-face {
-  font-family: Montserrat-Bold;
-  src: url($publicPath + "/assets/fonts/Montserrat-Bold.ttf");
+  font-family: RobotoMono;
+  font-style: normal;
+  font-weight: 200;
+  src: url($publicPath + '/assets/fonts/RobotoMono-Light.ttf');
+}
+
+@font-face {
+  font-family: RobotoMono;
+  font-style: normal;
+  font-weight: 300;
+  src: url($publicPath + '/assets/fonts/RobotoMono-Regular.ttf');
+}
+
+@font-face {
+  font-family: RobotoMono;
+  font-style: normal;
+  font-weight: 500;
+  src: url($publicPath + '/assets/fonts/RobotoMono-Medium.ttf');
+}
+
+@font-face {
+  font-family: RobotoMono;
+  font-style: normal;
+  font-weight: 700;
+  src: url($publicPath + '/assets/fonts/RobotoMono-Bold.ttf');
 }
