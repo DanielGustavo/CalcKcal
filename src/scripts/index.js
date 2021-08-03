@@ -1,4 +1,5 @@
 import getInputsValuesFromForm from './utils/_getInputsValuesFromForm';
+import runElementAnimation from './utils/_runElementAnimation';
 
 const DOM = {
   caloriesCalculatorForm: document.querySelector('form.caloriesCalculator'),
@@ -35,6 +36,9 @@ function displayTheCaloriesCalculatorResult(caloriesCalculatorResult) {
   });
 
   DOM.caloriesCalculatorResultElement.classList.remove('hidden');
+
+  const ulElement = DOM.caloriesCalculatorResultElement.querySelector('ul');
+  runElementAnimation(ulElement);
 }
 
 DOM.caloriesCalculatorForm.addEventListener('submit', (event) => {

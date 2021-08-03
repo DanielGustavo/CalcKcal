@@ -1,6 +1,10 @@
 @import './fonts';
 @import './colors';
 
+section {
+  animation: fadeInLeftToRight 0.7s forwards ease-in-out;
+}
+
 body {
   font-family: RobotoMono, Arial, Helvetica, sans-serif;
   color: $darkColor;

@@ -1,15 +1,26 @@
 @import './fonts';
 @import './default';
 @import './colors';
+@import './animations';
 
 section#CaloriesCalculator {
   h1 {
     color: $primaryDarkColor;
   }
 
+  @for $i from 1 through 6 {
+    form :nth-child(#{$i}n) {
+      animation: fadeInLeftToRight 0.7s forwards #{$i * 0.05}s ease-in-out;
+    }
+  }
+
   form {
     margin: 15px auto;
     width: 50%;
+
+    :nth-child(n) {
+      opacity: 0;
+    }
 
     input,
     .selectWrapper {
@@ -28,8 +39,16 @@ section#CaloriesCalculator {
   }
 
   .box {
+    animation: fadeInLeftToRight 0.7s forwards ease-in-out;
+
     b {
       color: $primaryColor;
+    }
+
+    @for $i from 1 through 4 {
+      ul.animation li:nth-child(#{$i}n) {
+        animation: fadeInLeftToRight 0.7s forwards #{$i * 0.05}s ease-in-out;
+      }
     }
 
     ul {
@@ -40,6 +59,7 @@ section#CaloriesCalculator {
       li {
         margin-bottom: 10px;
         text-align: justify;
+        opacity: 0;
 
         &:last-child {
           margin-bottom: 0;
@@ -57,6 +77,10 @@ section#CaloriesCalculator {
 
     .box {
       padding: 20px;
+
+      ul {
+        overflow: hidden;
+      }
 
       ul li {
         margin-bottom: 20px;
