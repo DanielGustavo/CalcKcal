@@ -106,11 +106,11 @@ button {
   );
 
   &:hover {
-    opacity: 0.9;
+    opacity: 0.9 !important;
   }
 
   &:active {
-    opacity: 1;
+    opacity: 1 !important;
   }
 
   cursor: pointer;
