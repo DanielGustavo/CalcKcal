@@ -1,1 +1,1 @@
-web: yarn heroku
+web: yarn http-server

@@ -28,8 +28,7 @@
   },
   "scripts": {
     "build": "NODE_ENV=production webpack",
-    "dev": "NODE_ENV=development webpack serve",
-    "heroku": "yarn && yarn build && http-server"
+    "dev": "NODE_ENV=development webpack serve"
   },
   "dependencies": {
     "http-server": "^0.12.3"
