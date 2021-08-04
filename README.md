@@ -38,7 +38,7 @@
    ```bash
    $ yarn
    ```
-2. Start the development server:
+2. Start building:
    ```bash
    $ yarn build
    ```
